@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Manager</title>
+    <link rel="stylesheet" href="./ASSETS/CSS/styles.css">
+</head>
+
+<body>
+    <div class="program-wrapper">
+
+        <div class="page-title">
+            <h1>Inventory Manager</h1>
+        </div>
+
+        <div class="container">
+            <div class="program-menu-container">
+                <nav class="program-menu">
+                    <ul>
+                        <li class="search-product-option">Search</li>
+                        <li class="create-product-option">Create</li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="forms-container">
+                <div class="search-form-container">
+                    <div class="search-form-title">
+                        <h2>SEARCH PRODUCT</h2>
+                    </div>
+                    <div class="result-messages-container">
+                        <p class="error-message d-none"></p>
+                    </div>
+                    <form class="form search-products-form">
+                        <input type="text" name="product_code" placeholder="Product Code">
+                        <input type="text" name="product_name" placeholder="Product Name">
+                        <div class="price-range-container">
+                            <input type="text" name="min_price" placeholder="Min Price">
+                            <input type="text" name="max_price" placeholder="Max Price">
+                        </div>
+                        <select name="product_category">
+                            <option value="">Select category</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Footwear">Footwear</option>
+                            <option value="Accesories">Accesories</option>
+                            <option value="Appliances">Appliances</option>
+                        </select>
+                        <input type="submit" name="search-form" value="SEARCH">
+                    </form>
+                </div>
+
+                <div class="create-form-container d-none">
+                    <div class="create-form-title">
+                        <h2>CREATE PRODUCT</h2>
+                    </div>
+                    <div class="result-messages-container">
+                        <p class="success-message d-none"></p>
+                        <p class="error-message d-none"></p>
+                    </div>
+                    <form class="form create-products-form">
+                        <input type="text" name="product_code" placeholder="Product Code" required>
+                        <input type="text" name="product_name" placeholder="Product Name" required>
+                        <select name="product_category" required>
+                            <option value="" disabled selected>Select category</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Footwear">Footwear</option>
+                            <option value="Accesories">Accesories</option>
+                            <option value="Appliances">Appliances</option>
+                        </select>
+                        <div class="product-special-field-container"> </div>
+                        <input type="number" name="stock_units" placeholder="Units in stock" required>
+                        <input type="text" name="product_price" placeholder="Price" required>
+
+                        <input type="submit" name="create-form" value="CREATE">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-results-container d-none">
+            <div class="close-modal-container"><span>X</span></div>
+            <h2>search results</h2>
+            <div class="results-container">
+                <div class="results-table-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./ASSETS/JS/ajax.js"></script>
+    <script type="module" src="./ASSETS/JS/listeners.js"></script>
+    <script type="module" src="./ASSETS/JS/search-products.js"></script>
+    <script type="module" src="./ASSETS/JS/utilities.js"></script>
+</body>
+
+</html>

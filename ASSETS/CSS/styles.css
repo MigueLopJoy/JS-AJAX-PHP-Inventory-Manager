@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2 {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.d-none {
+    display: none;
+}
+
+.program-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10vh;
+}
+
+.container {
+    position: relative;
+    padding: 2rem;
+    padding-top: 3.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+}
+
+/* MENU STYLING */
+
+.program-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #F0F0F0;
+    width: 100%;
+}
+
+.program-menu ul {
+    display: flex;
+}
+
+.program-menu ul li {
+    padding: .75rem 1.5rem;
+    border: 1px solid #CFCFCF;
+    cursor: pointer;
+}
+
+.program-menu ul li:hover {
+    background-color: #CFCFCF;
+    border-color: #CFCFCF22;
+}
+
+
+/* FORM STYLING */
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+select {
+    padding: .5rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background-color: #F0F0F0;
+}
+
+input[type="submit"] {
+    border-radius: .25rem;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #CFCFCF;
+    border: 1px solid #CFCFCF22;
+}
+
+
+/* TABLE STYLING */
+
+.search-results-container {
+    position: absolute;
+    height: 65vh;
+    overflow-y: scroll;
+    background-color: #fff;
+    padding: 2rem;
+    padding-top: 3rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+}
+
+.close-modal-container {
+    text-align: right;
+    cursor: pointer;
+}
+
+.close-modal-container span {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #AFAFAF;
+}
+
+.close-modal-container span:hover {
+    color: #FF0000;
+}
+
+.results-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.results-table th,
+.results-table td {
+    text-align: left;
+    padding: .75rem 1.75rem;
+}
+
+.results-table tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+.results-table th {
+    background-color: #020202;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+.success-message {
+    color: #00ff00;
+    margin-bottom: .15rem;
+}
+
+.error-message {
+    color: #ff0000;
+    margin-bottom: .15rem;
+}
